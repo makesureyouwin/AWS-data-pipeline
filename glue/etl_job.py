@@ -15,7 +15,7 @@ job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
 # Step 1: Read the raw file from S3 as a Spark DataFrame
-df = spark.read.option("header", "true").csv(args['source_path'])
+df = spark.read.option("header", "true").option("inferSchema", "true").csv(args['source_path'])
 
 print(f"Row count before transform: {df.count()}")
 

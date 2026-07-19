@@ -27,3 +27,5 @@ resource "aws_s3_bucket_versioning" "raw_data_versioning" {
     status = "Enabled"
   }
 }
+
+# verifying CI/CD pipeline trigger
